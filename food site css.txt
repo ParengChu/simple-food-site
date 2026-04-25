@@ -1,0 +1,194 @@
+food site css 
+
+
+
+/* BASE (mobile first) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.section-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  color: white;
+
+  background-image: url("./img/card\ 2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}   
+.section-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* dark overlay */
+}
+
+
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.heroes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  max-width: 100%;
+}
+
+/* TEXT */
+.heroes h3,
+.heroes h4 {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.hero-name h2 {
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+.hero-name h3 {
+  font-size: 16px;
+}
+
+/* LINE */
+.border-line {
+  width: 50px;
+  height: 2px;
+  background: #ff4d4d;
+  margin: 8px auto;
+}
+
+/* BUTTON */
+.hero-btn a {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 20px;
+  background: #ff4d4d;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* ARROW */
+.arrow-btn {
+  margin-top: 20px;
+}
+
+.arrow-btn a {
+  display: inline-block;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+/* hover effect */
+.arrow-btn a:hover {
+  opacity: 1;
+  transform: translateY(5px);
+}
+
+.section-2 {
+  min-height: 100vh;              /* full screen */
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;        /* vertical center */
+  align-items: center;            /* horizontal center */
+
+  text-align: center;
+  padding: 20px;
+}
+
+/* control width so text doesn't stretch ugly */
+.section-2 span {
+  max-width: 600px;
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+/* spacing for arrow */
+.section-2 .arrow-btn {
+  margin-top: 20px;
+}
+
+
+/* TABLET */
+@media (min-width: 768px) {
+  .heroes {
+    gap: 18px;
+    max-width: 600px;
+  }
+
+  .heroes h3,
+  .heroes h4 {
+    font-size: 16px;
+  }
+
+  .hero-name h2 {
+    font-size: 48px;
+  }
+
+  .hero-name h3 {
+    font-size: 20px;
+  }
+
+  .hero-btn a {
+    font-size: 16px;
+    padding: 12px 28px;
+  }
+}
+
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .hero-container {
+    max-width: 1100px;
+  }
+
+  .hero-name h2 {
+    font-size: 60px;
+  }
+
+  .hero-name h3 {
+    font-size: 24px;
+  }
+
+  .heroes {
+    gap: 22px;
+  }
+}
+
+.set-card-1 img{
+  width: 50px;
+  height: 50px;
+}
+.set-card-2 img {
+  width: 50px;
+  height: 50px;
+}
+.set-card-3 img {
+  width: 50px;
+  height: 50px;
+}
