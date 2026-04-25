@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>food site</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <section class="section-hero">
@@ -64,62 +65,71 @@
 </section>
 <section class="menu" id="menu">
   <h1>Our Menu</h1>
-  
 
-  <!-- MENU CATEGORY BUTTONS -->
-
-    <div class="menu-tabs">
-      <button class="tab-btn">Breakfasts</button>
-      <button class="tab-btn">Lunches</button>
-      <button class="tab-btn">Dinners</button>
-      <button class="tab-btn">Desserts</button>
-    </div>
-
-  <!-- MENU GRID -->
-  <section class="menu-grid" >
-
-    <!-- ITEM 1 -->
-    <button class="menu-item">
-      <h3>Roasted heritage carrot</h3>
-      <span>$13</span>
-      <p>Spiced honey-roasted carrots, feta, avocado, radish, fennel, mint & orange dressing</p>
-    </button>
-
-    <!-- ITEM 2 -->
-    <button class="menu-item">
-      <h3>Cobble lane bresaola salad</h3>
-      <span>$6</span>
-      <p>Cured beef, crispy artichoke, ricotta, almonds, balsamic & garden leaves</p>
-    </button>
-
-    <!-- ITEM 3 -->
-    <button class="menu-item">
-      <h3>Salmon salad</h3>
-      <span>$6</span>
-      <p>Smoked salmon, beets, radish, fennel, ricotta & green goddess dressing</p>
-    </button>
-
-    <!-- ITEM 4 -->
-    <button class="menu-item">
-      <h3>Artisan Breads</h3>
-      <span>$5</span>
-      <p>Focaccia, ciabatta, sourdough, grissini, olive oil & tapenade</p>
-    </button>
-
-    <!-- ITEM 5 -->
-    <button class="menu-item">
-      <h3>Crab & avocado bruschetta</h3>
-      <span>$17</span>
-      <p>White & brown crab, fennel, avocado, yoghurt & chilli</p>
-    </button>
-
-    <!-- ITEM 6 -->
-    <button class="menu-item">
-      <h3>Italian pâté bruschetta</h3>
-      <span>$12</span>
-      <p>Chicken-liver pâté, pancetta, vin santo & Parmesan</p>
-    </button>
+  <div class="menu-tabs">
+    <button class="tab-btn active" data-category="all">All</button>
+    <button class="tab-btn" data-category="breakfast">Breakfast</button>
+    <button class="tab-btn" data-category="lunch">Lunch</button>
+    <button class="tab-btn" data-category="dinner">Dinner</button>
+    <button class="tab-btn" data-category="dessert">Desserts</button>
   </div>
+
+  <section class="menu-grid">
+
+    <!-- BREAKFAST -->
+    <button class="menu-item" data-category="breakfast">
+      <h3>Tapsilog</h3>
+      <span>₱90</span>
+      <p>Beef tapa, garlic rice, fried egg</p>
+    </button>
+
+    <button class="menu-item" data-category="breakfast">
+      <h3>Longsilog</h3>
+      <span>₱85</span>
+      <p>Sweet longganisa, egg, garlic rice</p>
+    </button>
+
+    <!-- LUNCH -->
+    <button class="menu-item" data-category="lunch">
+      <h3>Lomi Special</h3>
+      <span>₱95</span>
+      <p>Thick noodle soup with toppings</p>
+    </button>
+
+    <button class="menu-item" data-category="lunch">
+      <h3>Chami</h3>
+      <span>₱90</span>
+      <p>Stir-fried noodles with pork & veggies</p>
+    </button>
+
+    <!-- DINNER -->
+    <button class="menu-item" data-category="dinner">
+      <h3>Pork Sisig</h3>
+      <span>₱120</span>
+      <p>Sizzling pork with onions and chili</p>
+    </button>
+
+    <button class="menu-item" data-category="dinner">
+      <h3>Chicken Inasal</h3>
+      <span>₱130</span>
+      <p>Grilled chicken with special marinade</p>
+    </button>
+
+    <!-- DESSERT -->
+    <button class="menu-item" data-category="dessert">
+      <h3>Halo-Halo</h3>
+      <span>₱70</span>
+      <p>Mixed dessert with ice cream</p>
+    </button>
+
+    <button class="menu-item" data-category="dessert">
+      <h3>Leche Flan</h3>
+      <span>₱60</span>
+      <p>Creamy caramel custard</p>
+    </button>
+
+  </section>
+</section>
   
 </section>
 <div class="book-btn">
@@ -133,11 +143,31 @@
 <span class="border-line"></span>
 <section class="booking" id="booking">
   <h1>Reservation</h1>
-  <input type="text" name="name" id="name" required>
-  <input type="tel" name="tel" id="tel">
-  <input type="time" name="time" id="time">
-  <input type="date" name="date" id="date">
-  <input type="number" name="number" id="number">
+
+  <div class="form-group">
+    <label for="name">Full Name</label>
+    <input type="text" name="name" id="name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="tel">Phone Number</label>
+    <input type="tel" name="tel" id="tel">
+  </div>
+
+  <div class="form-group">
+    <label for="date">Date</label>
+    <input type="date" name="date" id="date">
+  </div>
+
+  <div class="form-group">
+    <label for="time">Time</label>
+    <input type="time" name="time" id="time">
+  </div>
+
+  <div class="form-group">
+    <label for="number">Number of Guests</label>
+    <input type="number" name="number" id="number">
+  </div>
 
   <div class="req-btn">
     <a href="#">REQUEST</a>
@@ -152,14 +182,15 @@
       <h3>Cell No: 09XXXXXXXXX</h3>
     </div>
     <div class="icon">
-      <span>Icon 1</span>
-      <span>Icon 2</span>
-      <span>Icon 3</span>
-      <span>Icon 4</span>
-    </div>
+  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+  <a href="#"><i class="fa-solid fa-phone"></i></a>
+  <a href="#"><i class="fa-solid fa-location-dot"></i></a>
+</div>
 </div>
 <footer>
-  <h1>© 2026 ParengChu. All Rights Reserved</h1>
+  <h1 class="footer-text">© 2026 ParengChu. All Rights Reserved</h1>
 </footer>
+<script src="./script.js"></script>
 </body>
 </html>
